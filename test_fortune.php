@@ -1,6 +1,5 @@
 <?php
 $_fortune = GetFortuneInfo()["fortune"];
-$_res = DrawFortune($_fortune);
 
 $_one = 0;
 $_two = 0;

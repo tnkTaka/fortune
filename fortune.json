@@ -2,22 +2,22 @@
   "fortune": [
     {
       "luck": "大吉",
-      "image": "GreatFortune",
+      "image": "./assets/img/GreatFortune.png",
       "weight": 10
     },
     {
       "luck": "中吉",
-      "image": "MiddleFortune",
+      "image": "./assets/img/MiddleFortune.png",
       "weight": 20
     },
     {
       "luck": "小吉",
-      "image": "SmallFortune",
+      "image": "./assets/img/SmallFortune.png",
       "weight": 30
     },
     {
       "luck": "凶",
-      "image": "BadFortune",
+      "image": "./assets/img/BadFortune.png",
       "weight": 10
     }
   ]

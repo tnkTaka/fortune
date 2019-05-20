@@ -36,7 +36,8 @@ function DrawFortune($fortune){
     <meta charset = "UTF-8">
     <title>WP41</title>
 </head>
-<body>
-<?php echo $_fortune[$_res]["luck"],$_fortune[$_res]["image"]?>
-</body>
+    <body>
+        <h1><?php echo $_fortune[$_res]["luck"]?></h1>
+        <img src=<?php echo $_fortune[$_res]["image"]?> alt="おみくじ結果">
+    </body>
 </html>
