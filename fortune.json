@@ -1,0 +1,24 @@
+{
+  "fortune": [
+    {
+      "luck": "大吉",
+      "image": "GreatFortune",
+      "weight": 10
+    },
+    {
+      "luck": "中吉",
+      "image": "MiddleFortune",
+      "weight": 20
+    },
+    {
+      "luck": "小吉",
+      "image": "SmallFortune",
+      "weight": 30
+    },
+    {
+      "luck": "凶",
+      "image": "BadFortune",
+      "weight": 10
+    }
+  ]
+}
