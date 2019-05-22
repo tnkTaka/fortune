@@ -2,23 +2,33 @@
   "fortune": [
     {
       "luck": "大吉",
+      "message":"とても良い運気。",
       "image": "./assets/img/GreatFortune.png",
       "weight": 10
     },
     {
-      "luck": "中吉",
+      "luck": "吉",
+      "message":"良い運気。",
       "image": "./assets/img/MiddleFortune.png",
       "weight": 20
     },
     {
-      "luck": "小吉",
-      "image": "./assets/img/SmallFortune.png",
+      "luck": "中吉",
+      "message":"まあまあ運気が良い。",
+      "image": "./assets/img/MiddleFortune.png",
       "weight": 30
     },
     {
+      "luck": "小吉",
+      "message":"少し運気が良い。",
+      "image": "./assets/img/SmallFortune.png",
+      "weight": 35
+    },
+    {
       "luck": "凶",
+      "message":"運気が悪い。",
       "image": "./assets/img/BadFortune.png",
-      "weight": 10
+      "weight": 5
     }
   ]
 }

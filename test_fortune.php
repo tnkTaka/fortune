@@ -5,6 +5,7 @@ $_one = 0;
 $_two = 0;
 $_three = 0;
 $_four = 0;
+$_five = 0;
 
 for ($i = 0; $i < 100; $i++) {
     $_res = DrawFortune($_fortune);
@@ -16,13 +17,16 @@ for ($i = 0; $i < 100; $i++) {
         $_three++;
     }else if ($_res == 3) {
         $_four++;
+    }else if ($_res == 4) {
+        $_five++;
     }
 }
 
 echo "大吉",$_one;
-echo "中吉",$_two;
-echo "小吉",$_three;
-echo "凶",$_four;
+echo "吉",$_two;
+echo "中吉",$_three;
+echo "小吉",$_four;
+echo "凶",$_five;
 
 // jsonデータからおみくじの情報を取得
 function GetFortuneInfo(){
