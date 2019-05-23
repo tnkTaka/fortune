@@ -1,57 +1,30 @@
 <?php
+require __DIR__ . '/fortune.php';
 $_fortune = GetFortuneInfo()["fortune"];
 
-$_one = 0;
-$_two = 0;
-$_three = 0;
-$_four = 0;
-$_five = 0;
+$_GreatFortune = 0;
+$_GoodFortune = 0;
+$_MiddleFortune = 0;
+$_SmallFortune = 0;
+$_BadFortune = 0;
 
 for ($i = 0; $i < 100; $i++) {
     $_res = DrawFortune($_fortune);
     if ($_res == 0) {
-        $_one++;
+        $_GreatFortune++;
     }else if ($_res == 1) {
-        $_two++;
+        $_GoodFortune++;
     }else if ($_res == 2) {
-        $_three++;
+        $_MiddleFortune++;
     }else if ($_res == 3) {
-        $_four++;
+        $_SmallFortune++;
     }else if ($_res == 4) {
-        $_five++;
+        $_BadFortune++;
     }
 }
 
-echo "大吉",$_one;
-echo "吉",$_two;
-echo "中吉",$_three;
-echo "小吉",$_four;
-echo "凶",$_five;
-
-// jsonデータからおみくじの情報を取得
-function GetFortuneInfo(){
-    $json = file_get_contents("./fortune.json");
-    $data = json_decode($json,true);
-    return $data;
-}
-
-// 重みの合計を返す
-function GetSumOfWeights($fortune){
-    $sum = 0;
-    for ($i = 0; $i < count($fortune); $i++) {
-        $sum += $fortune[$i]["weight"];
-    }
-    return $sum;
-}
-
-// おみくじを引く
-function DrawFortune($fortune){
-    $sum = GetSumOfWeights($fortune);
-    $rand = rand(1, $sum);
-
-    for ($i = 0; $i < count($fortune); $i++) {
-        if (($sum -= $fortune[$i]["weight"]) < $rand)
-            return $i;
-    }
-}
-?>
+echo "大吉", $_GreatFortune;
+echo "吉", $_GoodFortune;
+echo "中吉", $_MiddleFortune;
+echo "小吉", $_SmallFortune;
+echo "凶", $_BadFortune;
